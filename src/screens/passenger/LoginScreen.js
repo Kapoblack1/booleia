@@ -12,7 +12,7 @@ const LoginPage = ({ onLoginPress,
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Login</Text>
-      <Text style={styles.subtitle}>Seja bem vindo ao bolleia</Text>
+      <Text style={styles.subtitle}>Seja bem vindo ao booleia</Text>
 
       <Text style={styles.title}>Email</Text>
 
@@ -43,7 +43,7 @@ const LoginPage = ({ onLoginPress,
           >
             {agreeToTerms && (
               <View style={styles.checked}>
-                <Check size={15} color="#2D93EA"/>
+                <Check size={15} color="#2D93EA" weight='bold'/>
               </View>
             )}
           </TouchableOpacity>
@@ -60,8 +60,8 @@ const LoginPage = ({ onLoginPress,
 
       
       
-      <TouchableOpacity onPress={onSignUpPress}>
-        <Text style={styles.signUpText}>Não tem uma conta? Criar conta</Text>
+      <TouchableOpacity onPress={onSignUpPress} style={styles.signUpButton}>
+        <Text>Não tem uma conta?</Text><Text style={styles.signUpText}>  Criar conta</Text>
       </TouchableOpacity>
     </View>
   );
@@ -70,7 +70,7 @@ const LoginPage = ({ onLoginPress,
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: "7%",
+    paddingHorizontal: "8%",
     backgroundColor: '#ffffff', // Ajuste conforme a cor de fundo da imagem
   },
   header: {
@@ -101,15 +101,16 @@ const styles = StyleSheet.create({
   },
   forgotPasswordText: {
     textAlign: 'right',
-    color: '#007AFF', // A cor normalmente usada para links
+    color: '#2D93EA', // A cor normalmente usada para links
     marginBottom: 25,
   },
   loginButton: {
-    backgroundColor: '#007AFF', // A cor do botão de login na imagem
-    borderRadius: 20,
+    backgroundColor: '#2D93EA', // A cor do botão de login na 
+    borderRadius: 30,
     paddingVertical: 15,
     alignItems: 'center',
-    marginBottom: 10,
+    marginBottom: 24,
+    marginTop: 20,
   },
   loginButtonText: {
     color: '#ffffff',
@@ -118,19 +119,22 @@ const styles = StyleSheet.create({
   },
   termsText: {
     fontSize: 12,
-    color: '#626262',
+    color: '#2D93EA',
     textAlign: 'center',
     marginBottom: 15,
   },
   linkText: {
-    color: '#007AFF', // A cor para textos clicáveis
+    color: '#2D93EA', // A cor para textos clicáveis
     textDecorationLine: 'underline',
+  },
+  signUpButton:{
+    flexDirection: "row",
+    justifyContent: "center"
   },
   signUpText: {
     fontSize: 16,
-    color: '#007AFF',
+    color: '#2D93EA',
     textAlign: 'center',
-    textDecorationLine: 'underline',
   }, checkboxContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -159,7 +163,7 @@ const styles = StyleSheet.create({
   checkboxLabel: {
     flex: 1,
     fontSize: 13,
-    color: "#686868",
+    color: "#B9C3CD",
     fontFamily: 'Poppins_400Regular',
 
   },
